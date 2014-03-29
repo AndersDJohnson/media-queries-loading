@@ -1,0 +1,37 @@
+////
+// Prevents FOUC by hiding specified elements when media queries are still loading,
+//   but only if JS is supported (as indicated by provided selector that JS should remove),
+//   and only if media queries are being polyfilled with an asynchrous parser, e.g. Respond.js
+////
+.media-queries-loading-mixin(@js-selector: '.js', @prefix: 'media-queries') {
+
+  @js-selector-interpolated: ~'@{js-selector}';
+  @prefix-interpolated: ~'@{prefix}';
+
+  @{js-selector-interpolated} {
+    .@{prefix-interpolated}-loading-invisible {
+      visibility: hidden;
+    }
+    .@{prefix-interpolated}-loading-hidden {
+      display: none;
+    }
+  }
+
+////
+// Turns off FOUC styles using a universal media queries,
+//   which is applied either immediately if supported,
+//   or otherwise once it's parsed if polyfilled.
+////
+   @media all and (min-width: 1px) {
+     @{js-selector-interpolated} {
+      .@{prefix-interpolated}-loading-invisible {
+        visibility: visible;
+      }
+      .@{prefix-interpolated}-loading-hidden {
+        display: block;
+        display: initial;
+      }
+    }
+  }
+
+}
