@@ -28,7 +28,7 @@ Example with [Respond.js][respond]:
       <!-- contents of this element will have {visibility: hidden} until media queries are loaded -->
     </div>
     <div class="media-queries-loading-hidden">
-      <!-- contents of this element will have {display: 'none'} until media queries are loaded -->
+      <!-- contents of this element will have {display: none} until media queries are loaded -->
     </div>
   </body>
 </html>
