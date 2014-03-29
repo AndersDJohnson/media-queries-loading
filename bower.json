@@ -12,6 +12,6 @@
     "tests"
   ],
   "main": [
-    "src/media-queries-loading.less"
+    "dist/media-queries-loading.css"
   ]
 }
