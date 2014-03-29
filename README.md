@@ -1,7 +1,7 @@
 media-queries-loading
 =====================
 
-Prevents FOUC due to media query polyfills,
+Prevents FOUC due to media query polyfills like [Respond.js][respond],
 by providing classes to hide specified elements until media queries are loaded and parsed.
 
 ## Install
@@ -14,7 +14,7 @@ bower install --save media-queries-loading
 
 ## Usage
 
-Example with Respond.js:
+Example with [Respond.js][respond]:
 
 ```html
 <html class="no-js">
@@ -36,3 +36,5 @@ Credit to Paul Irish for the [`.no-js` to `.js` trick](http://www.paulirish.com/
 ## LESS API
 
 See `src/media-queries-loading-mixin.less`.
+
+[respond]: https://github.com/scottjehl/Respond
