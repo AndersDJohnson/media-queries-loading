@@ -1,13 +1,21 @@
-////
-// Prevents FOUC by hiding specified elements when media queries are still loading,
-//   but only if JS is supported (as indicated by provided selector that JS should remove),
-//   and only if media queries are being polyfilled with an asynchrous parser, e.g. Respond.js
-////
+/*! MIT licensed by https://github.com/AndersDJohnson/media-queries-loading */
+/**
+ * Prevents FOUC by hiding specified elements when media queries are still loading,
+ *   but only if JS is supported (as indicated by provided selector that JS should remove),
+ *   and only if media queries are being polyfilled with an asynchrous parser, e.g. Respond.js
+ *
+ * @param [js-selector] An optional selector that indicates JavaScript support.
+ * @param [prefix] An optional prefix for the loading classes.
+ */
 .media-queries-loading-mixin(@js-selector: '.js', @prefix: 'media-queries') {
 
   @js-selector-interpolated: ~'@{js-selector}';
   @prefix-interpolated: ~'@{prefix}';
 
+  /**
+   * Adds FOUC styles using a universal media queries,
+   *   applied either immediately regardless of media query support.
+   */
   @{js-selector-interpolated} {
     .@{prefix-interpolated}-loading-invisible {
       visibility: hidden;
@@ -17,11 +25,11 @@
     }
   }
 
-////
-// Turns off FOUC styles using a universal media queries,
-//   which is applied either immediately if supported,
-//   or otherwise once it's parsed if polyfilled.
-////
+  /**
+   * Turns off FOUC styles using a universal media queries,
+   *   which is applied either immediately if supported,
+   *   or otherwise once it's parsed if polyfilled.
+   */
    @media all and (min-width: 1px) {
      @{js-selector-interpolated} {
       .@{prefix-interpolated}-loading-invisible {
