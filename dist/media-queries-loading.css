@@ -8,8 +8,7 @@
  * @param [prefix] An optional prefix for the loading classes.
  */
 /**
-   * Adds FOUC styles using a universal media queries,
-   *   applied either immediately regardless of media query support.
+   * Adds FOUC styles applied immediately regardless of media query support.
    */
 .js .media-queries-loading-invisible {
   visibility: hidden;
