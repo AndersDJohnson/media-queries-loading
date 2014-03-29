@@ -1,7 +1,7 @@
 {
   "name": "media-queries-loading",
   "description": "Prevents FOUC due to media query polyfills.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/AndersDJohnson/media-queries-loading",
   "license": "MIT",
   "ignore": [
