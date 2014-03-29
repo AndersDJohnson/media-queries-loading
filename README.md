@@ -1,7 +1,7 @@
 media-queries-loading
 =====================
 
-Prevents FOUC due to media query polyfills like [Respond.js][respond],
+Prevents [FOUC][fouc] (flash of unstyled content) due to media query polyfills like [Respond.js][respond],
 by providing classes to hide specified elements until media queries are loaded and parsed.
 
 ## Install
@@ -37,4 +37,5 @@ Credit to Paul Irish for the [`.no-js` to `.js` trick](http://www.paulirish.com/
 
 See `src/media-queries-loading-mixin.less`.
 
+[fouc]: http://en.wikipedia.org/wiki/Flash_of_unstyled_content
 [respond]: https://github.com/scottjehl/Respond
