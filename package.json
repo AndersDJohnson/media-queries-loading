@@ -1,6 +1,6 @@
 {
   "name": "media-queries-loading",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Prevents FOUC due to media query polyfills.",
   "main": "dist/media-queries-loading.css",
   "dependencies": {},
