@@ -19,8 +19,8 @@ Example with [Respond.js][respond]:
 ```html
 <html class="no-js">
   <head>
-    <link rel="stylesheet" type="text/css" href="dist/media-queries-loading.min.css" />
     <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <link rel="stylesheet" type="text/css" href="dist/media-queries-loading.min.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   </head>
   <body>
