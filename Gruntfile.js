@@ -24,5 +24,5 @@ module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('default', ['less', 'cssmin'])
+  grunt.registerTask('default', ['less', 'cssmin']);
 };
